@@ -8,10 +8,16 @@
 <body>
 <h1>BUYANDSELL</h1><hr>
 <h4>Товары со всей России</h4>
+<form action="/" method="get">
+    Поиск по названию объвления: <input type="text" name="title"><br>
+    <input type="submit" value="Поиск"/>
+</form>
 <#list products as product>
     <div>
         <p><b>${product.title}</b> ${product.price} руб. | <a href="/product/${product.ID}"> Подробнее...</a></p>
     </div>
+    <#else>
+        <h3>Создать новый товар</h3>
 </#list>
 <hr>
 <h3>Создать новый товар</h3>
