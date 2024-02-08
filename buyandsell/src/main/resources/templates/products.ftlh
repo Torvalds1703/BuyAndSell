@@ -17,17 +17,45 @@
         <p><b>${product.title}</b> ${product.price} руб. | <a href="/product/${product.ID}"> Подробнее...</a></p>
     </div>
     <#else>
-        <h3>Создать новый товар</h3>
+        <h3>Товаров нет</h3>
 </#list>
 <hr>
 <h3>Создать новый товар</h3>
-<form action="/product/create" method="post">
-    Название объявления: <input type="text" name = "title"><br><br>
-    Описание объявления: <input type="text" name = "description"><br><br>
-    Цена: <input type="number" name = "price"><br><br>
-    Город: <input type="text" name = "city"><br><br>
-    Имя: <input type="text" name = "author"><br><br>
-    <input type="submit" value="Добавить товар">
+<form action = "/product/create" method = "post" enctype="multipart/form-data">
+    <label>
+        Название объявления:
+        <input type="text" name="title"/>
+    </label> <br><br>
+    <label>
+        Описание объявления:
+        <input type="text" name="description"/>
+    </label> <br><br>
+    <label>
+        Цена:
+        <input type="number" name="price"/>
+    </label> <br><br>
+    <label>
+        Город:
+        <input type="text" name="city"/>
+    </label> <br><br>
+    <label>
+        Имя:
+        <input type="text" name="author"/>
+    </label> <br><br>
+    <label>
+        Первая фотография:
+        <input type="file" name="file1"/>
+    </label> <br><br>
+    <label>
+        Фторая фотография:
+        <input type="file" name="file2"/>
+    </label> <br><br>
+    <label>
+        Третья фотография:
+        <input type="file" name="file3"/>
+    </label> <br><br>
+    <input type="submit" value = "Добавить товар"/>
+
 </form>
 </body>
 </html>
