@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        BuyAndSell
+    </title>
+</head>
+<body>
+<h1>BUYANDSELL</h1><hr>
+<h4>Подробная информация о товаре</h4>
+<b>Название товара: </b>${product.title}<br>
+<b>Описание товара: </b>${product.description}<br>
+<b>Цена: </b>${product.price}<br>
+<b>Город: </b>${product.city}<br>
+<b>Имя: </b>${product.author}<br>
+<hr>
+<form action="products/delete/${product.ID}" method="post">
+    <input type="submit" value="Удалить товар">
+</form>
+</body>
+</html>
