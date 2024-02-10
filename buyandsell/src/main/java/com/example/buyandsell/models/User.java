@@ -1,6 +1,6 @@
 package com.example.buyandsell.models;
 
-import com.example.buyandsell.enums.Role;
+import com.example.buyandsell.models.enums.Role;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
